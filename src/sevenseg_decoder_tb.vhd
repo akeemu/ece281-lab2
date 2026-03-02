@@ -55,31 +55,31 @@ begin
     begin
         -- test 0
         w_i_Hex <= x"0"; wait for 50 ns;
-            assert (w_o_seg_n = "0111111") report "bad hex 0" severity failure;
+            assert (w_o_seg_n = "1000000") report "bad hex 0" severity failure;
         -- test 1
         w_i_Hex <= x"1"; wait for 50 ns;
-            assert (w_o_seg_n = "0000110") report "bad hex 1" severity failure;
+            assert (w_o_seg_n = "1111001") report "bad hex 1" severity failure;
         -- test 2
         w_i_Hex <= x"2"; wait for 50 ns;
-            assert (w_o_seg_n = "1011011") report "bad hex 2" severity failure;
+            assert (w_o_seg_n = "0100100") report "bad hex 2" severity failure;
         -- test 4
         w_i_Hex <= x"4"; wait for 50 ns;
-            assert (w_o_seg_n = "1100110") report "bad hex 2" severity failure;
+            assert (w_o_seg_n = "0011001") report "bad hex 4" severity failure;
         -- test 8
         w_i_Hex <= x"8"; wait for 50 ns;
-            assert (w_o_seg_n = "1111111") report "bad hex 2" severity failure;
+            assert (w_o_seg_n = "0000000") report "bad hex 8" severity failure;
         -- test 9
         w_i_Hex <= x"9"; wait for 50 ns;
-            assert (w_o_seg_n = "1100111") report "bad hex 9" severity failure;
+            assert (w_o_seg_n = "0011000") report "bad hex 9" severity failure;
         -- test A
         w_i_Hex <= x"A"; wait for 50 ns;
-            assert (w_o_seg_n = "1110111") report "bad hex A" severity failure;
+            assert (w_o_seg_n = "0001000") report "bad hex A" severity failure;
         -- test D
         w_i_Hex <= x"D"; wait for 50 ns;
-            assert (w_o_seg_n = "1011110") report "bad hex A" severity failure;
+            assert (w_o_seg_n = "0100001") report "bad hex D" severity failure;
         -- test F
         w_i_Hex <= x"F"; wait for 50 ns;
-            assert (w_o_seg_n = "1110001") report "bad hex F" severity failure;
+            assert (w_o_seg_n = "0001110") report "bad hex F" severity failure;
         wait;
     end process;
 
